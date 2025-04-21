@@ -1,6 +1,8 @@
 import pandas as pd
 import numpy as np
 import streamlit as st
+from io import BytesIO
+
 def calculate_metabolite_ratios(data):  
   #Arginine metabolism
   data['Arg/Orn+Cit']=data['Arginine']/(data['Ornitine']+data['Citrulline'])
