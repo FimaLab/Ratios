@@ -65,6 +65,20 @@ if uploaded_file is not None:
     st.subheader("Обновленные данные с метаболитными соотношениями")
     st.dataframe(output_data)
 
+     # Создаем байтовый поток Excel файла
+    excel_buffer = BytesIO()
+    with pd.ExcelWriter(excel_buffer, engine='xlsxwriter') as writer:
+        output_data.to_excel(writer, index=False, sheet_name='Результаты')
+    excel_bytes = excel_buffer.getvalue()
+
+    # Добавляем кнопку для скачивания
+    st.download_button(
+        label="Скачать Excel",
+        data=excel_bytes,
+        file_name="метаболиты_результаты.xlsx",
+        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
+
 # Запуск приложения
 if __name__ == "__main__":
     st.write("Загрузите файл")
