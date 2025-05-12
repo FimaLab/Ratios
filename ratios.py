@@ -48,13 +48,13 @@ def calculate_metabolite_ratios(data):
   data['MTHFR Deficiency (NBS)']=data['Methionine']/data['Phenylalanine']
   data['Ratio of Non-Essential to Essential AAs']=(data['Alanine']+data['Arginine']+
                                                    data['Asparagine']+data['Aspartic acid']+data['Glutamine']+data['Glutamic acid']+data['Glycine']+data['Proline']+
-                                                   data['Serine']+data['Tyrosine'])/(data['Histidine']+data['Summ Leu-Ile']+data['Lysine']+data['Methionine']+
+                                                   data['Serine']+data['Tyrosin'])/(data['Histidine']+data['Summ Leu-Ile']+data['Lysine']+data['Methionine']+
                                                    data['Phenylalanine']+data['Threonine']+data['Tryptophan']+data['Valine'])
   data['Ratio of Pro to Cit']=data['Proline']/data['Citrulline']
-  data['Sum of AAs']=data['Alanine']+data['Arginine']+data['Asparagine']+data['Aspartic acid']+data['Glutamine']+data['Glutamic acid']+data['Glycine']+data['Proline']+data['Serine']+data['Tyrosine']+data['Histidine']+data['Summ Leu-Ile']+data['Lysine']+data['Methionine']+data['Phenylalanine']+data['Threonine']+data['Tryptophan']+data['Valine']                                      
+  data['Sum of AAs']=data['Alanine']+data['Arginine']+data['Asparagine']+data['Aspartic acid']+data['Glutamine']+data['Glutamic acid']+data['Glycine']+data['Proline']+data['Serine']+data['Tyrosin']+data['Histidine']+data['Summ Leu-Ile']+data['Lysine']+data['Methionine']+data['Phenylalanine']+data['Threonine']+data['Tryptophan']+data['Valine']                                      
   data['Sum of Essential Aas']=data['Histidine']+data['Summ Leu-Ile']+data['Lysine']+data['Methionine']+data['Phenylalanine']+data['Threonine']+data['Tryptophan']+data['Valine']
                                                    
-  data['Sum of Non-Essential AAs']=data['Alanine']+data['Arginine']+data['Asparagine']+data['Aspartic acid']+data['Glutamine']+data['Glutamic acid']+data['Glycine']+data['Proline']+ data['Serine']+data['Tyrosine']                                               
+  data['Sum of Non-Essential AAs']=data['Alanine']+data['Arginine']+data['Asparagine']+data['Aspartic acid']+data['Glutamine']+data['Glutamic acid']+data['Glycine']+data['Proline']+ data['Serine']+data['Tyrosin']                                               
   data['Sum of Solely Glucogenic AAs']=data['Alanine']+data['Arginine']+data['Asparagine']+data['Aspartic acid']+data['Glutamine']+data['Glutamic acid']+data['Glycine']+data['Histidine']+data['Methionine']+data['Proline']+data['Serine']+data['Threonine']+data['Valine']                                                    
   data['Sum of Solely Ketogenic AAs']=data['Summ Leu-Ile']+data['Lysine']
   data['Valinemia (NBS)']=data['Valine']/data['Phenylalanine']
