@@ -51,7 +51,7 @@ def calculate_metabolite_ratios(data):
                                                    data['Serine']+data['Tyrosine'])/(data['Histidine']+data['Summ Leu-Ile']+data['Lysine']+data['Methionine']+
                                                    data['Phenylalanine']+data['Threonine']+data['Tryptophan']+data['Valine'])
   data['Ratio of Pro to Cit']=data['Proline']/data['Citrulline']
-  data['Sum of AAs']=data['Alanine']+data['Arginine']+data['Asparagine']+data['Aspartic acid']+data['Glutamine']+data['Glutamic acid']+data['Glycine']+data['Proline']+data['Serine']+data['Tyrosine']+(data['Histidine']+data['Summ Leu-Ile']+data['Lysine']+data['Methionine']+data['Phenylalanine']+data['Threonine']+data['Tryptophan']+data['Valine']                                      
+  data['Sum of AAs']=data['Alanine']+data['Arginine']+data['Asparagine']+data['Aspartic acid']+data['Glutamine']+data['Glutamic acid']+data['Glycine']+data['Proline']+data['Serine']+data['Tyrosine']+data['Histidine']+data['Summ Leu-Ile']+data['Lysine']+data['Methionine']+data['Phenylalanine']+data['Threonine']+data['Tryptophan']+data['Valine']                                      
   data['Sum of Essential Aas']=data['Histidine']+data['Summ Leu-Ile']+data['Lysine']+data['Methionine']+data['Phenylalanine']+data['Threonine']+data['Tryptophan']+data['Valine']
                                                    
   data['Sum of Non-Essential AAs']=data['Alanine']+data['Arginine']+data['Asparagine']+data['Aspartic acid']+data['Glutamine']+data['Glutamic acid']+data['Glycine']+data['Proline']+ data['Serine']+data['Tyrosine']                                               
