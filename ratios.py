@@ -51,18 +51,11 @@ def calculate_metabolite_ratios(data):
                                                    data['Serine']+data['Tyrosine'])/(data['Histidine']+data['Summ Leu-Ile']+data['Lysine']+data['Methionine']+
                                                    data['Phenylalanine']+data['Threonine']+data['Tryptophan']+data['Valine'])
   data['Ratio of Pro to Cit']=data['Proline']/data['Citrulline']
-  data['Sum of AAs']=data['Alanine']+data['Arginine']+
-                     data['Asparagine']+data['Aspartic acid']+data['Glutamine']+data['Glutamic acid']+data['Glycine']+data['Proline']+
-                     data['Serine']+data['Tyrosine']+(data['Histidine']+data['Summ Leu-Ile']+data['Lysine']+data['Methionine']+
-                     data['Phenylalanine']+data['Threonine']+data['Tryptophan']+data['Valine']
-  data['Sum of Essential Aas']=data['Histidine']+data['Summ Leu-Ile']+data['Lysine']+data['Methionine']+
-                                                   data['Phenylalanine']+data['Threonine']+data['Tryptophan']+data['Valine']
-  data['Sum of Non-Essential AAs']=data['Alanine']+data['Arginine']+
-                                                   data['Asparagine']+data['Aspartic acid']+data['Glutamine']+
-                                                      data['Glutamic acid']+data['Glycine']+data['Proline']+
-                                                   data['Serine']+data['Tyrosine']
-  data['Sum of Solely Glucogenic AAs']=data['Alanine']+data['Arginine']+data['Asparagine']+data['Aspartic acid']+data['Glutamine']+data['Glutamic acid']+data['Glycine']+
-                                                      data['Histidine']+data['Methionine']+data['Proline']+data['Serine']+data['Threonine']+data['Valine']
+  data['Sum of AAs']=data['Alanine']+data['Arginine']+data['Asparagine']+data['Aspartic acid']+data['Glutamine']+data['Glutamic acid']+data['Glycine']+data['Proline']+data['Serine']+data['Tyrosine']+(data['Histidine']+data['Summ Leu-Ile']+data['Lysine']+data['Methionine']+data['Phenylalanine']+data['Threonine']+data['Tryptophan']+data['Valine']                                      
+  data['Sum of Essential Aas']=data['Histidine']+data['Summ Leu-Ile']+data['Lysine']+data['Methionine']+data['Phenylalanine']+data['Threonine']+data['Tryptophan']+data['Valine']
+                                                   
+  data['Sum of Non-Essential AAs']=data['Alanine']+data['Arginine']+data['Asparagine']+data['Aspartic acid']+data['Glutamine']+data['Glutamic acid']+data['Glycine']+data['Proline']+ data['Serine']+data['Tyrosine']                                               
+  data['Sum of Solely Glucogenic AAs']=data['Alanine']+data['Arginine']+data['Asparagine']+data['Aspartic acid']+data['Glutamine']+data['Glutamic acid']+data['Glycine']+data['Histidine']+data['Methionine']+data['Proline']+data['Serine']+data['Threonine']+data['Valine']                                                    
   data['Sum of Solely Ketogenic AAs']=data['Summ Leu-Ile']+data['Lysine']
   data['Valinemia (NBS)']=data['Valine']/data['Phenylalanine']
   data['Carnosine Synthesis']=data['Carnosine']/data['Histidine']
@@ -83,13 +76,10 @@ def calculate_metabolite_ratios(data):
   data['DLD (NBS)']=data['Proline']/data['Phenylalanine']
   data['MTHFR Deficiency (NBS)']=data['Methionine']/data['Phenylalanine']
   data['Ratio of Non-Essential to Essential AAs']=(data['Alanine']+data['Arginine']+
-                                                      data['Asparagine']+data['Aspartic acid']+data['Glutamine']+data['Glutamic acid']+data['Glycine']+data['Proline']+
-                                                      data['Serine']+data['Tyrosin'])/(data['Histidine']+data['Summ Leu-Ile']+data['Lysine']+data['Methionine']+
-                                                      data['Phenylalanine']+data['Threonine']+data['Tryptophan']+data['Valine'])
+                                                      data['Asparagine']+data['Aspartic acid']+data['Glutamine']+data['Glutamic acid']+data['Glycine']+data['Proline']+data['Serine']+data['Tyrosin'])/(data['Histidine']+data['Summ Leu-Ile']+data['Lysine']+data['Methionine']+data['Phenylalanine']+data['Threonine']+data['Tryptophan']+data['Valine'])                                                 
   data['Ratio of Pro to Cit']=data['Proline']/data['Citrulline']
   data['Sum of AAs']=data['Alanine']+data['Arginine']+data['Asparagine']+data['Aspartic acid']+data['Glutamine']+data['Glutamic acid']+data['Glycine']+data['Proline']+data['Serine']+data['Tyrosin']+data['Histidine']+data['Summ Leu-Ile']+data['Lysine']+data['Methionine']+data['Phenylalanine']+data['Threonine']+data['Tryptophan']+data['Valine']
-  data['Sum of Essential Aas']=data['Histidine']+data['Summ Leu-Ile']+data['Lysine']+data['Methionine']+data['Phenylalanine']+data['Threonine']+data['Tryptophan']+data['Valine']
-                                                      
+  data['Sum of Essential Aas']=data['Histidine']+data['Summ Leu-Ile']+data['Lysine']+data['Methionine']+data['Phenylalanine']+data['Threonine']+data['Tryptophan']+data['Valine']                                                   
   data['Sum of Non-Essential AAs']=data['Alanine']+data['Arginine']+data['Asparagine']+data['Aspartic acid']+data['Glutamine']+data['Glutamic acid']+data['Glycine']+data['Proline']+data['Serine']+data['Tyrosin']
                                                       
                                                           
@@ -113,8 +103,7 @@ def calculate_metabolite_ratios(data):
   #carnitines
     
   data['2MBG (NBS)']=data['C5']/data['C3']
-  data['Carnitine Uptake Defect (NBS)']=(data['C0']+data['C2']+data['C3']+
-                                             data['C16']+data['C18']+data['C18-1'])/data['Citrulline']
+  data['Carnitine Uptake Defect (NBS)']=(data['C0']+data['C2']+data['C3']+data['C16']+data['C18']+data['C18-1'])/data['Citrulline']                                           
   data['CPT-2 Deficiency (NBS)']=(data['C16']+data['C18-1'])/data['C2']
   data['EMA (NBS)']=data['C4']/data['C8']
   #data['HMG-CoA Lyase Deficiency (NBS)']=
