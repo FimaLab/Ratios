@@ -129,7 +129,7 @@ def calculate_metabolite_ratios(data):
   data['VLCAD Deficiency (NBS)']=data['C14-1']/data['C16']
   #data['w-Oxidation']=
 
-    return data
+  return data
 
 # Streamlit app
 st.title("Метаболитные соотношения")
