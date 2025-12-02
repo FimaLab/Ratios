@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 from io import BytesIO
-from function_ratio import calculate_metabolite_ratios
+from function_ratio import calculate_metabolite_ratios,calculate_metabolite_ratios_zebra
 from constants import *
 from utils import *
 
@@ -22,10 +22,10 @@ if panel == "Человек":
 else:
    # Служебная информация — в боковой панели
    with st.sidebar:
-        st.sidebar.selectbox("Доступные соотношения (поиск)", all_possible_ratios)
+        st.sidebar.selectbox("Доступные соотношения (поиск)", all_possible_ratios_zebra)
 
         # Вывод количества соотношений
-        st.sidebar.metric(label="Общее количество соотношений", value=len(all_possible_ratios))
+        st.sidebar.metric(label="Общее количество соотношений", value=len(all_possible_ratios_zebra))
 
    uploaded_file = st.file_uploader("Выберите файл Excel", type=["xlsx"],key="zebra_uploader")
 
@@ -38,7 +38,7 @@ if uploaded_file is not None:
            # Расчет соотношений
            output_data, ratios_data, missing_cols, skipped_ratios, calculated_ratios,successful_ratios = calculate_metabolite_ratios(data)
         else:
-           output_data, ratios_data, missing_cols, skipped_ratios, calculated_ratios,successful_ratios = calculate_metabolite_ratios(data)
+           output_data, ratios_data, missing_cols, skipped_ratios, calculated_ratios,successful_ratios = calculate_metabolite_ratios_zebra(data)
 
         # Отображение данных в табах
         tab1, tab2 = st.tabs(["🧬 Метаболиты", "📈 Соотношения"])
